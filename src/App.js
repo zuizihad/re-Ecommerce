@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, BrowserRouter as Router, Route } from 'react-router-dom'
+import {BrowserRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component'
@@ -9,11 +9,11 @@ function App() {
     <div>
     <BrowserRouter>
     <Header/>
-      <Router>
+      <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
-      </Router>
-      </BrowserRouter>
+      </Switch>
+    </BrowserRouter>
     </div>
   );
 }
